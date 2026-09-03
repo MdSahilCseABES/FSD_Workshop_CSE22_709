@@ -1,0 +1,29 @@
+# docker-compose runs more than one container together.
+# Here we need two: our Node app, and a MongoDB server.
+
+services:
+  # ---------- MongoDB container ----------
+  mongo:
+    image: mongo:7          # ready-made image, nothing to build
+    container_name: mongo-db
+    ports:
+      - "27017:27017"       # so you can also connect from mongosh on your Mac
+    volumes:
+      - mongo-data:/data/db # keeps the data even after the container stops
+
+  # ---------- Node.js app container ----------
+  app:
+    build: .                # build using the Dockerfile in this folder
+    container_name: student-api
+    ports:
+      - "3000:3000"         # left = port on your Mac, right = port in container
+    environment:
+      # "mongo" here is the service name above. Docker gives every service a
+      # hostname matching its name, so the app finds MongoDB by that name.
+      - MONGO_URL=mongodb://mongo:27017/studentDB
+      - PORT=3000
+    depends_on:
+      - mongo               # start the mongo container first
+
+volumes:
+  mongo-data:

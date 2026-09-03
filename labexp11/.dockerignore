@@ -1,0 +1,13 @@
+# Files listed here are NOT copied into the Docker image.
+# Works the same way as .gitignore.
+
+# node_modules is installed inside the container by "npm install".
+# Copying the Mac version in would overwrite it and can break packages
+# that were built for macOS instead of Linux.
+node_modules
+
+.env
+*.log
+.DS_Store
+.git
+README.md

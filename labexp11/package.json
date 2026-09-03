@@ -1,0 +1,13 @@
+{
+  "name": "labexp11",
+  "version": "1.0.0",
+  "description": "Dockerized Node.js + MongoDB app",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^8.1.1"
+  }
+}
