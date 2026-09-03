@@ -1,0 +1,12 @@
+{
+  "name": "labexp6",
+  "version": "1.0.0",
+  "description": "Express server that serves HTML files using the fs module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
