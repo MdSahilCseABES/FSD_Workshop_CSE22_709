@@ -93,7 +93,7 @@ Hello World
   "statusCode": 200,
   "requestHeaders": {
     "host": "localhost:3000",
-    "user-agent": "curl/8.7.1"
+    "user-agent": "curl/8.21.0"
   }
 }
 ```
