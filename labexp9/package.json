@@ -1,0 +1,13 @@
+{
+  "name": "labexp9",
+  "version": "1.0.0",
+  "description": "REST API using Express and MongoDB",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^8.1.1"
+  }
+}
