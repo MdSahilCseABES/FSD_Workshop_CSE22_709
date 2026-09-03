@@ -1,0 +1,12 @@
+{
+  "name": "labexp8",
+  "version": "1.0.0",
+  "description": "CRUD operations on studentDB.students collection",
+  "main": "crud.js",
+  "scripts": {
+    "start": "node crud.js"
+  },
+  "dependencies": {
+    "mongodb": "^6.3.0"
+  }
+}
