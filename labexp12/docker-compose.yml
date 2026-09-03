@@ -1,0 +1,43 @@
+# Runs all three parts of the project together:
+# the MongoDB database, the Express backend, and the React frontend.
+
+services:
+  # ---------- Database ----------
+  mongo:
+    image: mongo:7
+    container_name: sms-mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+  # ---------- Backend ----------
+  backend:
+    build: ./backend
+    container_name: sms-backend
+    ports:
+      - "5000:5000"
+    environment:
+      # "mongo" is the service name above, which Docker turns into a hostname
+      - MONGO_URL=mongodb://mongo:27017/smsDB
+      - PORT=5000
+    depends_on:
+      - mongo
+
+  # ---------- Frontend ----------
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        # localhost and not "backend", because this URL is used by the
+        # browser on your Mac, not by the frontend container. The browser
+        # cannot resolve Docker service names.
+        - VITE_API_URL=http://localhost:5000
+    container_name: sms-frontend
+    ports:
+      - "3000:80" # nginx serves on port 80 inside the container
+    depends_on:
+      - backend
+
+volumes:
+  mongo-data:
