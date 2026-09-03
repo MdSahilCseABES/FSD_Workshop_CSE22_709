@@ -1,0 +1,12 @@
+{
+  "name": "labexp7",
+  "version": "1.0.0",
+  "description": "Create studentDB database with a students collection",
+  "main": "create_db.js",
+  "scripts": {
+    "start": "node create_db.js"
+  },
+  "dependencies": {
+    "mongodb": "^6.3.0"
+  }
+}
