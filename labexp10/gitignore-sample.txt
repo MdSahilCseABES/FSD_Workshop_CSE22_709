@@ -1,0 +1,22 @@
+# Node modules - never push this folder.
+# It is very large and anyone can recreate it with "npm install".
+node_modules/
+
+# Environment file - holds the database password and secret keys.
+# This is the most important line in the whole file.
+.env
+
+# Log files
+*.log
+npm-debug.log*
+
+# macOS creates this file in every folder
+.DS_Store
+
+# Build output
+dist/
+build/
+
+# Editor settings
+.vscode/
+.idea/
