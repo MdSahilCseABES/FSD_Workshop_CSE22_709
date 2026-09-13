@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "title": "Wi-Fi not working in Lab 3",
+    "category": "Network",
+    "priority": "High",
+    "status": "Open",
+    "createdBy": "Sahil",
+    "createdAt": "2026-09-11T06:22:04.673Z"
+  },
+  {
+    "id": 2,
+    "title": "Projector lamp replacement in Room 204",
+    "category": "Hardware",
+    "priority": "Medium",
+    "status": "In Progress",
+    "createdBy": "Rahul",
+    "createdAt": "2026-09-11T06:22:04.676Z"
+  },
+  {
+    "id": 3,
+    "title": "Request for VS Code extension pack",
+    "category": "Software",
+    "priority": "Low",
+    "status": "Closed",
+    "createdBy": "Priya",
+    "createdAt": "2026-09-11T06:22:04.676Z"
+  }
+]

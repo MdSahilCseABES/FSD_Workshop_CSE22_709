@@ -19,3 +19,9 @@ build/
 # Editor / tool folders
 .claude/
 .vscode/
+
+
+# Shared practical archives
+*.zip
+new_lab_*
+

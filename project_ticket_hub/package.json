@@ -1,0 +1,11 @@
+{
+  "name": "ticketflow-helpdesk",
+  "version": "1.0.0",
+  "description": "Event-Driven Helpdesk & Audit Hub combining Lab Experiments 1, 2, 3, and 5",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "MD Sahil (CSE22 / 709)",
+  "dependencies": {}
+}
